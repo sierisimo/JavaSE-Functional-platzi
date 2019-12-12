@@ -1,4 +1,4 @@
-package com.platzi.functional.pure;
+package com.platzi.functional._01_pure;
 
 public class PureFunctions {
     /**
