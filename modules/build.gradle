@@ -1,0 +1,20 @@
+group 'com.platzi'
+version '0.0.1'
+
+def createTask(taskName, classMain) {
+    tasks.create(taskName, JavaExec) {
+        group = "Execution"
+        description = "Run the demo class"
+        classpath = sourceSets.main.runtimeClasspath
+        main = "com.platzi.functional.$classMain"
+    }
+}
+
+createTask("impuras", "Main")
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}
