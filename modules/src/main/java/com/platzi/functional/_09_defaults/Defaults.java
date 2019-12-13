@@ -1,5 +1,7 @@
 package com.platzi.functional._09_defaults;
 
+import java.util.Date;
+
 public class Defaults {
     @FunctionalInterface
     interface Operational {
@@ -53,6 +55,28 @@ public class Defaults {
 //
 //
 //
+
+    /**
+     * Como nota final, cabe mencionar que comenzando con Java 8 las interfaces pueden tener
+     * metodos estaticos:
+     */
+    @FunctionalInterface
+    interface DayConter {
+        int countDays(Date startDate, Date endDate);
+
+        /**
+         * Esto puede ser de utilidad si queremos mantener una funcion como functional interface pero
+         * mantener logica ligada a esa interfaz.
+         */
+        static boolean isLeapYear(int year) {
+            if (year % 4 == 0) {
+                if (year % 400 == 0) return true;
+
+                return year % 100 != 0;
+            }
+            return false;
+        }
+    }
 
     public static void main(String[] args) {
         repeatUsingDefaults("Perrito");
