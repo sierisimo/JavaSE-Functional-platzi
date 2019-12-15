@@ -12,21 +12,40 @@ public class Optionals {
      * La idea de Optional es que previo a hacer una operacion, se haga una validacion dentro de
      * el Optional para evitar problemas.
      */
-    static Optional<String> ejemplos() {
+    static Optional<String> optionals() {
         //La clase optional nos ofrece diferentes maneras de crear un optional segun los datos que tengamos
 
-        //El primero de ellos es crear un Optional de un dato que SI tenemos:
+
+
+
+        //La primera de ellas es crear un Optional de un dato que SI tenemos:
         Optional<String> optional = Optional.of("Java 8");
+
+
 
         //Si no estamos seguros del valor que pondremos en el Optional, podemos usar ofNullable:
         optional = Optional.ofNullable(uknownResult());
 
+
+
+        
         //Y si lo que queremos es evitar devolver un null pero no tenemos un valor para regresar,
         //podemos usar simplemente:
         return Optional.empty();
     }
 
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
