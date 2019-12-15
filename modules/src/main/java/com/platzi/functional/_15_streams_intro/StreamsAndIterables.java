@@ -109,6 +109,7 @@ public class StreamsAndIterables {
         Stream<Integer> countingStream = Stream.generate(() -> x.getAndIncrement());
 
 
+
         /*
         Algo todavia mas interesante de estas nuevas estructuras es que podemos paralelizar
         la iteracion de las mismas sin preocuparnos mucho
