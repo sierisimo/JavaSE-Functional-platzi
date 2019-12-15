@@ -28,7 +28,7 @@ public class Optionals {
 
 
 
-        
+
         //Y si lo que queremos es evitar devolver un null pero no tenemos un valor para regresar,
         //podemos usar simplemente:
         return Optional.empty();
@@ -105,7 +105,12 @@ public class Optionals {
 
 
         //Es importante mencionar que Optional no ejecutara ninguna de estas funciones
-        //en casos donde el dato no existe (null, empty() ). Asi que es seguro.
+        //en casos donde el dato no existe (null, empty() ). Asi que es una manera segura de
+        //escribir codigo sin preocuparnos por la presencia del dato.
+
+        //En casos muy especificos donde quisieramos generar un Exception cuando haya una ausencia
+        //de datos, podemos usar el metodo `orElseThrow`:
+        integerOptional.orElseThrow(() -> new DatoNecesarioException());
 
         //Optional nos da un acercamiento hacia un concepto que en FP se conoce como Monad
     }
@@ -218,6 +223,10 @@ public class Optionals {
     }
 
     static void someComplexOperation(String s) {
+
+    }
+
+    static class DatoNecesarioException extends IllegalArgumentException {
 
     }
 }
