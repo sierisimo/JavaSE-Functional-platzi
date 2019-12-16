@@ -33,7 +33,7 @@ public class _01_FunctionDemo {
 
 
     /**
-     * Veamos un ejemplo simple… una funcion que nos devuelve si un numero es par
+     * Veamos un ejemplo simple… una funcion que nos retorna si un numero es par
      */
     private static void functionExample() {
         Function<Integer, Boolean> isEven = new Function<Integer, Boolean>() {

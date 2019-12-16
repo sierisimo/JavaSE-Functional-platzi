@@ -52,14 +52,14 @@ public class StreamListeners {
             cosas en paralelo.
          */
         Stream<List<String>> coursesModules = Stream.of(/*Obentemos los cursos de una DB*/);
-        //Nos devuelve un Stream de List<String> donde las listas tienen literalmente el elemento "Java"
+        //Nos retorna un Stream de List<String> donde las listas tienen literalmente el elemento "Java"
         //Tal vez nuestra busqueda era sobre cursos que contuvieran la palabra Java como parte del nombre…
         coursesModules.filter(s -> s.contains("Java"));
 
         /*
         Para poder operar este tipo de streams, usaremos una operacion llamada flatMap
 
-        flatMap toma un Stream<Collecion<T>> y nos devuelve un Stream<T>.
+        flatMap toma un Stream<Collecion<T>> y nos retorna un Stream<T>.
 
         Es decir, flatMap se encarga de combianr todos los elementos de las colecciones de los streams
         en un solo Stream. Para hacer esto, debemos proveer una lambda que emita un stream como resultado
@@ -67,7 +67,7 @@ public class StreamListeners {
         Si nuestro Stream inicial tenia:
         Stream{ List{ "Node.js", "JavaScript"}, List{"Android", "Kotlin"}, List{"JavaSE 8", "Java FP"}}
 
-        Aplicar flatMap devuelve:
+        Aplicar flatMap retorna:
         Stream{ "Node.js", "JavaScript", "Android", "Kotlin", "JavaSE 8", "Java FP" }
          */
         List<String> nodeCourses = Utils.getListOf("Node.js", "Express.js", "Eventloop");

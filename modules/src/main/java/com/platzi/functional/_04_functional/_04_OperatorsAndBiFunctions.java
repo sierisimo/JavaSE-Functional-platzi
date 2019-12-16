@@ -13,7 +13,7 @@ public class _04_OperatorsAndBiFunctions {
     private static void unaries() {
         //Aunque esta funcion luce muy parecida a una que ya usamos previamente,
         //el tenerla como UnaryOperator nos deja en claro que es una operacion que
-        //trabaja sobre un tipo y nos devuelve el mismo tipo.
+        //trabaja sobre un tipo y nos retorna el mismo tipo.
         UnaryOperator<Integer> square = x -> x * x;
 
         UnaryOperator<String> quote = s -> "\"" + s + "\"";

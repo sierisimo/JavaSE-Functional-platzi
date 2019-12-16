@@ -138,7 +138,7 @@ public class _01_Operator {
         //con la definicion de la funcion que necesitamos:
 
         /*
-        La clase tiene definido este metodo que recibe un string y devuelve un int.
+        La clase tiene definido este metodo que recibe un string y retorna un int.
 
 
         class HelperOperator {
@@ -147,7 +147,7 @@ public class _01_Operator {
         }
 
 
-        La funcion que tenemos que pasar, justamente, recibe un string y devuelve un int…
+        La funcion que tenemos que pasar, justamente, recibe un string y retorna un int…
 
         giveMeAFunction(Function<String, Integer> function)
 

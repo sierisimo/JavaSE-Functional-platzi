@@ -182,7 +182,7 @@ public class Optionals {
      * Funcion usando ambos casos:
      */
     static void outside() {
-        //Invocando a un metodo que no sabemos que devuelve:
+        //Invocando a un metodo que no sabemos que retorna:
         String directResult = antesDeOptional(null);
         if (directResult != null) {
             directResult = directResult.replace("Sierisimo", "Sinuhe");

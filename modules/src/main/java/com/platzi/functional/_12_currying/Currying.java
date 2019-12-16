@@ -5,7 +5,7 @@ import java.util.function.Function;
 public class Currying {
     /**
      * Empecemos con algo que ya conocemos: una FunctionalInterface que toma 3 tipos de datos
-     * F, S, T y devuelve un tipo de dato R cuando se manda a llamar su metodo apply.
+     * F, S, T y retorna un tipo de dato R cuando se manda a llamar su metodo apply.
      * <p>
      * Hasta que no deberia haber nada nuevo.
      */
