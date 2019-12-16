@@ -1,7 +1,10 @@
 package com.platzi.jobsearch;
 
 import com.beust.jcommander.JCommander;
+import com.beust.jcommander.ParameterException;
 
+import java.util.List;
+import java.util.Optional;
 import java.util.function.Supplier;
 
 public interface CommanderFunctions {
@@ -33,5 +36,31 @@ public interface CommanderFunctions {
         JCommander jCommander = buildCommander(argumentsSupplier.get());
         jCommander.setProgramName(name);
         return jCommander;
+    }
+
+    /**
+     * Funcion utilizada para tomar los datos de JCommander, los argumentos esperados y en caso de que algo falle,
+     * una funcion con el JCommander que genero el error.
+     */
+    static Optional<List<Object>> parseArguments(
+            JCommander jCommander,
+            String[] arguments,
+            OnCommandError onCommandError
+    ) {
+        List<Object> result;
+        try {
+            jCommander.parse(arguments);
+
+            return Optional.of(jCommander.getObjects());
+        } catch (ParameterException exception) {
+            onCommandError.onError(jCommander);
+        }
+
+        return Optional.empty();
+    }
+
+    @FunctionalInterface
+    interface OnCommandError {
+        void onError(JCommander jCommander);
     }
 }
