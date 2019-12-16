@@ -21,5 +21,11 @@ repositories {
 }
 
 dependencies {
-    
+    implementation group: 'com.beust', name: 'jcommander', version: '1.78'
+
+    implementation group: 'io.github.openfeign', name: 'feign-core', version: '10.6.0'
+    implementation group: 'io.github.openfeign', name: 'feign-gson', version: '10.6.0'
+
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
 }
