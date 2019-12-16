@@ -140,7 +140,7 @@ public class Operators {
 //
 //
 //
-    static Stream<List<String>> getCourses() {
+    public static Stream<List<String>> getCourses() {
         List<String> nodeCourses = Utils.getListOf("Node.js:Intermedio", "Express.js:Intermedio", "Eventloop:Avanzado");
         List<String> javaCourses = Utils.getListOf("Spring:Introductorio", "Maven:Intermedio", "Gradle:Avanzado", "Funtional:Introductorio");
 

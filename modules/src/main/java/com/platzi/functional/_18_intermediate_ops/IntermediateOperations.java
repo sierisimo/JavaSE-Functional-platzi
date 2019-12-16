@@ -10,7 +10,7 @@ public class IntermediateOperations {
     static void operaciones() {
         /*
         Las operaciones intermedias, como se vio en el modulo anterior, son operaciones que
-        devuelven un nuevo Stream.
+        retornan un nuevo Stream.
 
         Estas operaciones son:
 
@@ -91,5 +91,11 @@ public class IntermediateOperations {
          */
         Stream<String> choosenTwoHeroes = justTwoHeroes.peek(heroe -> System.out.println("Un heroe ha sido elegido:  " + heroe));
 
+        /*
+        Existen otras operaciones como sorted() que alteran el orden del Stream
+        o mas especificas como las operaciones mapTo… que convierten el Stream de un tipo a otro
+
+        Es importante entender que estas operaciones solo generan nuevos Stream con cada invocacion.
+         */
     }
 }
