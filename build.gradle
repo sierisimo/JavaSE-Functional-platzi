@@ -1,5 +1,38 @@
 allprojects {
     apply plugin: 'java'
 
-    sourceCompatibility = 1.8
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(21)
+        }
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.3'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.3'
+    }
+}
+
+project(':jobs-search-reporter') {
+    apply plugin: 'application'
+
+    group = 'com.platzi'
+    version = '0.0.1'
+
+    application {
+        mainClass = 'com.platzi.jobsearch.JobSearch'
+        applicationName = 'job-search'
+    }
+
+    dependencies {
+        implementation 'com.beust:jcommander:1.82'
+        implementation 'io.github.openfeign:feign-core:13.3'
+        implementation 'io.github.openfeign:feign-gson:13.3'
+    }
 }
